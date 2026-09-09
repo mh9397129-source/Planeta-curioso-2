@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mundo Seguridad Digital 🛡️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: linear-gradient(#d1f7c4, #a8dadc); margin: 0; }
+    h1 { color: #1d3557; margin-top: 40px; }
+    p { font-size: 18px; color: #34495e; }
+    .opcion {
+      display: inline-block;
+      background: #457b9d;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .opcion:hover { background: #1d3557; }
+    #resultado { margin-top: 30px; font-size: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🛡️ Bienvenidos al Mundo Seguridad Digital 🛡️</h1>
+  <p>Aprendamos a navegar seguros en internet. Responde la misión:</p>
+
+  <div>
+    <p>Si recibes un correo sospechoso con un enlace extraño, ¿qué deberías hacer?</p>
+    <div class="opcion" onclick="verificar('clic')">Hacer clic en el enlace</div>
+    <div class="opcion" onclick="verificar('ignorar')">Ignorarlo y eliminarlo</div>
+    <div class="opcion" onclick="verificar('compartir')">Compartirlo con amigos</div>
+  </div>
+
+  <div id="resultado"></div>
+
+  <script>
+    function verificar(eleccion) {
+      if(eleccion === 'ignorar') {
+        document.getElementById("resultado").innerHTML = "✅ ¡Correcto! Nunca abras enlaces sospechosos.";
+      } else {
+        document.getElementById("resultado").innerHTML = "❌ Esa no es la mejor opción. Recuerda: ¡la seguridad primero!";
+      }
+    }
+  </script>
+</body>
+</html>
