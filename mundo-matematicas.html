@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mundo Matemáticas ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Comic Sans MS, cursive; text-align: center; background: linear-gradient(#fceabb, #f8b500); margin: 0; }
+    h1 { color: #2c3e50; margin-top: 40px; }
+    p { font-size: 18px; color: #34495e; }
+    .pregunta { font-size: 20px; margin: 20px; }
+    .respuesta { margin: 10px; padding: 10px; background: #fff; border-radius: 8px; display: inline-block; cursor: pointer; }
+    .respuesta:hover { background: #d1f7c4; }
+    #resultado { font-size: 22px; margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🌟 Bienvenidos al Mundo Matemáticas 🌟</h1>
+  <p>Resuelve la misión: ¿Cuánto es 3 + 4?</p>
+
+  <div class="pregunta">
+    <div class="respuesta" onclick="verificar(5)">5</div>
+    <div class="respuesta" onclick="verificar(7)">7</div>
+    <div class="respuesta" onclick="verificar(9)">9</div>
+  </div>
+
+  <div id="resultado"></div>
+
+  <script>
+    function verificar(respuesta) {
+      if(respuesta === 7) {
+        document.getElementById("resultado").innerHTML = "✅ ¡Correcto! Has completado la misión.";
+      } else {
+        document.getElementById("resultado").innerHTML = "❌ Intenta de nuevo.";
+      }
+    }
+  </script>
+</body>
+</html>
